@@ -8,6 +8,35 @@ app_license = "mit"
 
 # Includes in <head>
 # ------------------
+# hooks.py
+fixtures = [
+    {
+        "dt": "Notification",
+        "filters": [["name", "in", [
+            "Notification To Assigned User"
+        ]]]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [["name", "in", ["Team Task Workflow"]]]
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [["name", "in", ["Completed","In Progress","Open"]]]
+    },
+    {
+        "dt": "Role",
+        "filters": [["name", "in", ["Team Manager","Team User"]]]
+    },
+    {
+        "dt": "Workflow Action Master",
+        "filters": [["name", "in", ["Complete","Start Progress"]]]
+    },
+    {
+        "dt": "Dashboard Chart",
+        "filters": [["name", "in", ["Task Per Team","Task Status Distribution"]]]
+    }
+]
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/team_tasks_manager/css/team_tasks_manager.css"
