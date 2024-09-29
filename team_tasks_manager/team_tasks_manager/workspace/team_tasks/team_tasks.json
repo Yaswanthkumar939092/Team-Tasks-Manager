@@ -1,0 +1,37 @@
+{
+ "charts": [
+  {
+   "chart_name": "Task Per Team",
+   "label": "Task Per Team"
+  },
+  {
+   "chart_name": "Task Status Distribution",
+   "label": "Task Status Distribution"
+  }
+ ],
+ "content": "[{\"id\":\"ayVsNIYtWL\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Team Tasks</span>\",\"col\":12}},{\"id\":\"LRiRmBJZFa\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Task Per Team\",\"col\":12}},{\"id\":\"ICrDrPx8AT\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Task Status Distribution\",\"col\":12}}]",
+ "creation": "2024-09-29 16:17:25.875275",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Team Tasks",
+ "links": [],
+ "modified": "2024-09-29 21:27:39.037197",
+ "modified_by": "Administrator",
+ "module": "Team Tasks Manager",
+ "name": "Team Tasks",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [],
+ "title": "Team Tasks"
+}

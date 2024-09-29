@@ -1,0 +1,43 @@
+[
+ {
+  "attach_print": 0,
+  "channel": "Email",
+  "condition": null,
+  "date_changed": null,
+  "days_in_advance": 0,
+  "docstatus": 0,
+  "doctype": "Notification",
+  "document_type": "Team Task",
+  "enabled": 1,
+  "event": "New",
+  "is_standard": 0,
+  "message": "Hello {{ frappe.db.get_value('User', user_id, 'full_name') }},<br>\n\nYou have been assigned a new task. Please review the details and let me know if you have any questions.<br><br>\n\nTask: {{ doc.name }}<br><br>\n\n\n<a href=\"{{ frappe.utils.get_url('/app/team-task/' ~ doc.name) }}\">View Task</a><br><br>\n\n\nBest regards,<br>\nTeam",
+  "message_type": "Markdown",
+  "method": null,
+  "modified": "2024-09-29 16:15:01.125629",
+  "module": null,
+  "name": "Notification To Assigned User",
+  "print_format": null,
+  "property_value": null,
+  "recipients": [
+   {
+    "bcc": null,
+    "cc": null,
+    "condition": null,
+    "parent": "Notification To Assigned User",
+    "parentfield": "recipients",
+    "parenttype": "Notification",
+    "receiver_by_document_field": "assigned_to",
+    "receiver_by_role": null
+   }
+  ],
+  "send_system_notification": 0,
+  "send_to_all_assignees": 0,
+  "sender": null,
+  "sender_email": null,
+  "set_property_after_alert": null,
+  "slack_webhook_url": null,
+  "subject": "Task Assignment {{doc.name}}",
+  "value_changed": null
+ }
+]

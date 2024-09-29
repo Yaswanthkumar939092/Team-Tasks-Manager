@@ -1,0 +1,88 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Team Task",
+  "is_active": 1,
+  "modified": "2024-09-29 16:53:27.894790",
+  "name": "Team Task Workflow",
+  "override_status": 0,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "allow_edit": "Team User",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Team Task Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Open",
+    "update_field": "status",
+    "update_value": "Open",
+    "workflow_builder_id": "1"
+   },
+   {
+    "allow_edit": "Team User",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Team Task Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "In Progress",
+    "update_field": "status",
+    "update_value": "In Progress",
+    "workflow_builder_id": "2"
+   },
+   {
+    "allow_edit": "Team Manager",
+    "avoid_status_override": 0,
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Team Task Workflow",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Completed",
+    "update_field": "status",
+    "update_value": "Completed",
+    "workflow_builder_id": "3"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Start Progress",
+    "allow_self_approval": 1,
+    "allowed": "Team User",
+    "condition": null,
+    "next_state": "In Progress",
+    "parent": "Team Task Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Open",
+    "workflow_builder_id": "action-1"
+   },
+   {
+    "action": "Complete",
+    "allow_self_approval": 1,
+    "allowed": "Team Manager",
+    "condition": null,
+    "next_state": "Completed",
+    "parent": "Team Task Workflow",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "In Progress",
+    "workflow_builder_id": "action-2"
+   }
+  ],
+  "workflow_data": "[{\"type\":\"state\",\"dimensions\":{\"width\":88,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":40.515625,\"y\":-11,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":92.03125,\"y\":23,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":40.515625,\"y\":57,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11,\"y\":23,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":478,\"y\":108,\"z\":0},\"id\":\"1\",\"position\":{\"x\":478,\"y\":108}},{\"type\":\"state\",\"dimensions\":{\"width\":127,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":60.1875,\"y\":-11,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":131.375,\"y\":23,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":60.1875,\"y\":57,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11,\"y\":23,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":867,\"y\":58,\"z\":0},\"id\":\"2\",\"position\":{\"x\":867,\"y\":58}},{\"type\":\"state\",\"dimensions\":{\"width\":125,\"height\":53},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":59.125,\"y\":-11,\"width\":7,\"height\":7},{\"id\":\"right\",\"position\":\"right\",\"x\":129.25,\"y\":23,\"width\":7,\"height\":7},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":59.125,\"y\":57,\"width\":7,\"height\":7},{\"id\":\"left\",\"position\":\"left\",\"x\":-11,\"y\":23,\"width\":7,\"height\":7}]},\"computedPosition\":{\"x\":1415,\"y\":86,\"z\":0},\"id\":\"3\",\"position\":{\"x\":1415,\"y\":86}},{\"type\":\"action\",\"dimensions\":{\"width\":118,\"height\":33},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":55.9375,\"y\":-2,\"width\":6,\"height\":6},{\"id\":\"right\",\"position\":\"right\",\"x\":113.875,\"y\":13.5,\"width\":6,\"height\":6},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":55.9375,\"y\":29,\"width\":6,\"height\":6},{\"id\":\"left\",\"position\":\"left\",\"x\":-2,\"y\":13.5,\"width\":6,\"height\":6}]},\"computedPosition\":{\"x\":745,\"y\":220,\"z\":0},\"id\":\"action-1\",\"position\":{\"x\":745,\"y\":220},\"data\":{\"from_id\":\"1\",\"to_id\":\"2\"}},{\"type\":\"action\",\"dimensions\":{\"width\":87,\"height\":33},\"handleBounds\":{\"source\":[{\"id\":\"top\",\"position\":\"top\",\"x\":40.3125,\"y\":-2,\"width\":6,\"height\":6},{\"id\":\"right\",\"position\":\"right\",\"x\":82.640625,\"y\":13.5,\"width\":6,\"height\":6},{\"id\":\"bottom\",\"position\":\"bottom\",\"x\":40.3125,\"y\":29,\"width\":6,\"height\":6},{\"id\":\"left\",\"position\":\"left\",\"x\":-2,\"y\":13.5,\"width\":6,\"height\":6}]},\"computedPosition\":{\"x\":1211,\"y\":288,\"z\":0},\"id\":\"action-2\",\"position\":{\"x\":1211,\"y\":288},\"data\":{\"from_id\":\"2\",\"to_id\":\"3\"}},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"1\",\"target\":\"action-1\",\"updatable\":true,\"id\":\"edge-1-action-1\",\"animated\":true,\"sourceX\":577.03125,\"sourceY\":134.5,\"targetX\":743,\"targetY\":236.5},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"action-1\",\"target\":\"2\",\"updatable\":true,\"id\":\"edge-action-1-2\",\"animated\":true,\"sourceX\":864.875,\"sourceY\":236.5,\"targetX\":856,\"targetY\":84.5,\"markerEnd\":{\"type\":\"arrow\",\"width\":15,\"height\":15,\"strokeWidth\":1.5,\"color\":\"#687178\"}},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"2\",\"target\":\"action-2\",\"updatable\":true,\"id\":\"edge-2-action-2\",\"animated\":true,\"sourceX\":1005.375,\"sourceY\":84.5,\"targetX\":1209,\"targetY\":304.5},{\"sourceHandle\":\"right\",\"targetHandle\":\"left\",\"type\":\"transition\",\"source\":\"action-2\",\"target\":\"3\",\"updatable\":true,\"id\":\"edge-action-2-3\",\"animated\":true,\"sourceX\":1299.640625,\"sourceY\":304.5,\"targetX\":1404,\"targetY\":112.5,\"markerEnd\":{\"type\":\"arrow\",\"width\":15,\"height\":15,\"strokeWidth\":1.5,\"color\":\"#687178\"}}]",
+  "workflow_name": "Team Task Workflow",
+  "workflow_state_field": "workflow_state"
+ }
+]

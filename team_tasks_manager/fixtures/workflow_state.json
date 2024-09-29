@@ -1,0 +1,29 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-09-29 16:04:16.686035",
+  "name": "Open",
+  "style": "",
+  "workflow_state_name": "Open"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-09-29 16:05:07.739916",
+  "name": "In Progress",
+  "style": "",
+  "workflow_state_name": "In Progress"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2024-09-29 16:05:45.003428",
+  "name": "Completed",
+  "style": "",
+  "workflow_state_name": "Completed"
+ }
+]
