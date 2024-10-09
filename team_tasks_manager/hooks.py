@@ -12,30 +12,22 @@ app_license = "mit"
 fixtures = [
     {
         "dt": "Notification",
-        "filters": [["name", "in", [
-            "Notification To Assigned User"
-        ]]]
+        "filters": [["name", "in", ["Notification To Assigned User"]]],
     },
-    {
-        "dt": "Workflow",
-        "filters": [["name", "in", ["Team Task Workflow"]]]
-    },
+    {"dt": "Workflow", "filters": [["name", "in", ["Team Task Workflow"]]]},
     {
         "dt": "Workflow State",
-        "filters": [["name", "in", ["Completed","In Progress","Open"]]]
+        "filters": [["name", "in", ["Completed", "In Progress", "Open"]]],
     },
-    {
-        "dt": "Role",
-        "filters": [["name", "in", ["Team Manager","Team User"]]]
-    },
+    {"dt": "Role", "filters": [["name", "in", ["Team Manager", "Team User"]]]},
     {
         "dt": "Workflow Action Master",
-        "filters": [["name", "in", ["Complete","Start Progress"]]]
+        "filters": [["name", "in", ["Complete", "Start Progress"]]],
     },
     {
         "dt": "Dashboard Chart",
-        "filters": [["name", "in", ["Task Per Team","Task Status Distribution"]]]
-    }
+        "filters": [["name", "in", ["Task Per Team", "Task Status Distribution"]]],
+    },
 ]
 
 # include js, css files in header of desk.html
@@ -255,4 +247,3 @@ fixtures = [
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
-
